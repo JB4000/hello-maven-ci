@@ -19,6 +19,12 @@ public class AppTest {
     public void testMultiply() {
         assertEquals(6, App.multiply(2, 3));
     }
+
+    @Test
+    public void testToFail() {
+        assertEquals(99, App.multiply(2, 3));
+    }
+
     
 
 }
