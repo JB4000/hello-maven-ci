@@ -1,6 +1,6 @@
 # Hello Maven CI
 
-![Java CI with Maven](https://github.com/JB4000/hello-maven-ci/actions/workflows/ci.yml/badge.svg)](https://github.com/JB4000/hello-maven-ci/actions/workflows/ci.yml)
+![Java CI with Maven](https://github.com/JB4000/hello-maven-ci/actions/workflows/ci.yml/badge.svg)]
 
 A simple Java project demonstrating CI/CD with Maven and GitHub Actions.
 
