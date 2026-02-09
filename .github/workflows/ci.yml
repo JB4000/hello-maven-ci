@@ -42,8 +42,13 @@ jobs:
 
     - name: Build and push Docker image
       if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+      shell: bash
       run: |
-        docker build -t ghcr.io/${OWNER_LC}/hello-maven:latest .
-        docker build -t ghcr.io/${OWNER_LC}/hello-maven:${{ github.sha }} .
-        docker push ghcr.io/${OWNER_LC}/hello-maven:latest
-        docker push ghcr.io/${OWNER_LC}/hello-maven:${{ github.sha }}
+        OWNER_LC="${GITHUB_REPOSITORY_OWNER,,}"
+        IMAGE="ghcr.io/${OWNER_LC}/hello-maven"
+
+        docker build -t "${IMAGE}:latest" .
+        docker build -t "${IMAGE}:${{ github.sha }}" .
+
+        docker push "${IMAGE}:latest"
+        docker push "${IMAGE}:${{ github.sha }}"
