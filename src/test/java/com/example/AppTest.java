@@ -20,10 +20,6 @@ public class AppTest {
         assertEquals(6, App.multiply(2, 3));
     }
 
-    @Test
-    public void testToFail() {
-        assertEquals(999, App.multiply(2, 3));
-    }
 
     
 
