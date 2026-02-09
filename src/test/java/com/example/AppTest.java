@@ -22,7 +22,7 @@ public class AppTest {
 
     @Test
     public void testToFail() {
-        assertEquals(99, App.multiply(2, 3));
+        assertEquals(999, App.multiply(2, 3));
     }
 
     
